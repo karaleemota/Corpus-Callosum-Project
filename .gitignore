@@ -1,0 +1,4 @@
+*.txt
+*.zip
+*.class
+/FastLED-master
