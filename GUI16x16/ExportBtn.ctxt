@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=ExportBtn
+comment0.text=\r\n\ When\ this\ button\ is\ clicked,\ the\ rgb\ data\ of\ the\ pixels\ will\ be\ exported\ to\ a\ .txt\ file\r\n\ \r\n\ @author\ Karaleemota\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ ExportBtn\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment2.params=text\ size
+comment2.target=ExportBtn(java.lang.String,\ java.awt.Point)
+comment3.params=filename
+comment3.target=void\ export(java.lang.String)
+comment3.text=\r\n\ Check\ if\ the\ button\ was\ clicked.\ If\ it\ was,\ export\ the\ pixels'\ data\ to\ the\ given\ text\ file\r\n
+numComments=4

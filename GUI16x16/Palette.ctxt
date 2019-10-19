@@ -1,0 +1,27 @@
+#BlueJ class context
+comment0.target=Palette
+comment0.text=\r\n\ Palette\r\n\ <p>\r\n\ A\ Color\ choosing\ GUI,\ including\:<p>\r\n\ 4\ Sliders\ for\ changing\ the\ Red,\ Green,\ Blue,\ and\ Alpha\ values\ of\ a\ Color.<p>\r\n\ 24\ memory\ slots.\ Clicking\ on\ the\ slots\ will\ change\ which\ one\ will\ be\ selected.<p>\r\n\ A\ "Find\ Color"\ Button\ that\ will\ "look"\ at\ the\ pixel\ where\ the\ mouse\ is\ (if\ inside\ the\ World).\ Clicking\ will\ then\ grab\ the\ Color\ at\ the\ mouse's\ position.\ Pressing\ escape\ will\ cancel\ it.<p>\r\n\ There\ is\ the\ possibility\ that\ you\ have\ other\ Actors\ in\ the\ World\ that\ react\ to\ being\ clicked\ on,\ though\ you\ may\ wish\ to\ get\ a\ Color\ off\ of\ their\ images\ and\ don't\ want\ to\ invoke\ the\ Actors'\ behavior.\ To\ overcome\ this,\ inside\ of\ your\ World\ class\ constructor\ have\ a\ setPaintOrder()\ method\ with\ "Palette.Cover.class"\ as\ the\ first\ parameter.\r\n\ <p>\r\n\ Action\ listener\:\ getResult()\r\n\ \r\n\ @author\ Taylor\ Born\r\n\ @version\ November\ 2011\ -\ March\ 2014\r\n
+comment1.params=
+comment1.target=Palette()
+comment1.text=\r\n\ A\ new\ Palette\ with\ some\ default\ colors\ stored.\r\n
+comment2.params=c
+comment2.target=Palette(java.awt.Color)
+comment2.text=\r\n\ A\ new\ Palette\ with\ some\ default\ colors\ stored,\ with\ Color\ given\ stored\ and\ active.\r\n\ @param\ c\ The\ Color\ the\ Palette\ will\ have\ contained\ within\ its\ first\ memory\ slot\ (being\ the\ one\ first\ selected).\r\n
+comment3.params=
+comment3.target=void\ act()
+comment3.text=\r\n\ Act.\r\n
+comment4.params=
+comment4.target=void\ initializeOpen()
+comment5.params=
+comment5.target=void\ callToEscape()
+comment5.text=\r\n\ Overwriting\ Window's\ callToEscape\ so\ that\ if\ looking\ for\ a\ Color\ among\ the\ World\ and\ its\ Actors,\ pressing\ escape\ cancels\ this\ action,\ otherwise\ closes\ like\ Window.\r\n
+comment6.params=c
+comment6.target=void\ toggleShow(java.awt.Color)
+comment6.text=\r\n\ Does\ what\ toggleShow()\ does\ but\ gives\ a\ Color\ value\ to\ be\ the\ initial\ selected\ Color.\r\n\ @param\ c\ Color\ to\ be\ initially\ selected\ Color.\r\n\ @see\ toggleShow()\r\n
+comment7.params=c
+comment7.target=void\ setColor(java.awt.Color)
+comment7.text=\r\n\ Set\ the\ current\ active\ memory\ slot\ to\ the\ given\ Color\ and\ updates\ Sliders.\r\n\ @param\ c\ The\ Color\ to\ set\ as\ active\ Color.\r\n
+comment8.params=
+comment8.target=java.awt.Color\ getColor()
+comment8.text=\r\n\ Return\ the\ color\ from\ the\ sliders\ on\ this\ palette\r\n
+numComments=9

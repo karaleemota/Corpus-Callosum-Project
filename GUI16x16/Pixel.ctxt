@@ -1,8 +1,16 @@
 #BlueJ class context
 comment0.target=Pixel
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Pixel\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Pixel\ here.\r\n\ \r\n\ @author\ karaleemota\r\n\ @version\ 10/16/19\r\n
 comment1.params=
 comment1.target=Pixel()
-comment2.params=
-comment2.target=void\ act()
-numComments=3
+comment2.params=scale
+comment2.target=Pixel(int)
+comment3.params=r\ g\ b\ a
+comment3.target=void\ setColor(int,\ int,\ int,\ int)
+comment3.text=\r\n\ Sets\ the\ color\ of\ the\ pixel.\ parameters\ are\ the\ rgba\ values\ for\ the\ color\r\n
+comment4.params=
+comment4.target=void\ act()
+comment5.params=
+comment5.target=java.lang.String\ getStringValue()
+comment5.text=\r\n\ Write\ the\ pixel\ data\ in\ a\ String.\ The\ rgba\ values\ will\ be\ written\ in\ a\ single\ line\r\n\ Ex\:\ "rrr\ gggg\ bb"\r\n
+numComments=6
