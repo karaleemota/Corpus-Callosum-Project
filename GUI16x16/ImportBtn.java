@@ -52,6 +52,7 @@ public class ImportBtn extends Button
                     int row = lineCnt/16;//row value of pixel in the pixel array
                     int col = lineCnt % 16;//column value of the pixel in the pixel array
                     //now that we know which pixel we are on, change the color of that pixel
+                    System.out.println(row + " " + col);
                     currPixels[row][col].setColor(red, green, blue, 255);
                     lineCnt++;//increment the line count
                 }

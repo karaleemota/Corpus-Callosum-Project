@@ -1,6 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.awt.Point;
-import java.io.FileWriter;
+import java.io.*;
 import java.io.IOException;
 
 /**
@@ -34,7 +34,7 @@ public class ExportBtn extends Button
             //export to the txt file
             try 
             {
-                FileWriter writer = new FileWriter(filename, true);
+                FileWriter writer = new FileWriter(filename, false);
                 Pixel[][] tempPixels = ((MyWorld)getWorld()).getPixels();//get the array of pixels from the world class
                 //iterate through all the pixels to read their info
                 for(int i = 0; i < 16; i++)

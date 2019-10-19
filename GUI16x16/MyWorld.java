@@ -38,7 +38,10 @@ public class MyWorld extends World
         //add an Export Button to the GUI. When the export button is clicked, the pixels rgb values will be written in a .txt file
         addObject(exportBtn,1010,500);
         //add import button the the gui. When the import button is clicked, the pixels on the screen will display the data saved in the file given to import
-        addObject(importBtn,1010, 700);
+        addObject(importBtn,1010, 630);
+        //add a label that says "file name"
+        addObject(new Label("File Name"), 896, 540);
+        addObject(new Label("File Name"), 896, 673);
     }
     public Palette getPalette()
     {
