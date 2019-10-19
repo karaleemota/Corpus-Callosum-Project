@@ -15,6 +15,10 @@ public class MyWorld extends World
     //make button that reads pixel data from a file, and shows that data on the screen in the pixels
     private ImportBtn importBtn = new ImportBtn("Import", new Point(150,50));
     private Pixel[][] pixels = new Pixel[16][16];
+    //make text box where user can write which file they would like to export to
+    private TextBox exportTextBox = new TextBox(new Point(180,25),"output.txt");
+    //make text box where user can write which file they would like to import from
+    private TextBox importTextBox = new TextBox(new Point(180,25),"input.txt");
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -34,14 +38,17 @@ public class MyWorld extends World
             }
         }
         //add the color palette to the world
-        addObject(palette,1010,300);
+        addObject(palette,1010,200);
         //add an Export Button to the GUI. When the export button is clicked, the pixels rgb values will be written in a .txt file
-        addObject(exportBtn,1010,500);
+        addObject(exportBtn,1010,400);
         //add import button the the gui. When the import button is clicked, the pixels on the screen will display the data saved in the file given to import
         addObject(importBtn,1010, 630);
         //add a label that says "file name"
-        addObject(new Label("File Name"), 896, 540);
-        addObject(new Label("File Name"), 896, 673);
+        addObject(new Label("File Name:"), 896, 440);
+        addObject(new Label("File Name:"), 896, 673);
+        //add text boxes to world
+        addObject(exportTextBox, 1027, 450);
+        addObject(importTextBox, 1027, 680);
     }
     public Palette getPalette()
     {
@@ -50,5 +57,13 @@ public class MyWorld extends World
     public Pixel[][] getPixels()
     {
         return pixels;
+    }
+    public String getOutputFile()
+    {
+        return exportTextBox.getText();
+    }
+    public String getInputFile()
+    {
+        return importTextBox.getText();
     }
 }

@@ -3,7 +3,7 @@ import java.awt.Point;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-
+ 
 /**
  * When this button is clicked, the rgb data of the pixels will be exported to a .txt file
  * 
@@ -19,7 +19,7 @@ public class ImportBtn extends Button
     public void act() 
     {
         super.act();//call the Button class act
-        importFile("input.txt");
+        importFile(((MyWorld)getWorld()).getInputFile());//import pixel data from the .txt file specified in the import text field
     }
     public ImportBtn(String text, Point size)
     {
@@ -49,16 +49,15 @@ public class ImportBtn extends Button
                     int green = Integer.valueOf(rgbValues[1]);//green should be the 2nd value in the split string
                     int blue = Integer.valueOf(rgbValues[2]);//blue should be the 3rd value in the split string
                     //now assign the rgb values to the correct pixel in the GUI
-                    int row = lineCnt/16;//row value of pixel in the pixel array
+                    int row = (int)(lineCnt/16);//row value of pixel in the pixel array
                     int col = lineCnt % 16;//column value of the pixel in the pixel array
                     //now that we know which pixel we are on, change the color of that pixel
-                    System.out.println(row + " " + col);
                     currPixels[row][col].setColor(red, green, blue, 255);
                     lineCnt++;//increment the line count
                 }
                 reader.close();
             } catch (IOException e) {
-                e.printStackTrace();
+               // e.printStackTrace();
             }
         }
     }

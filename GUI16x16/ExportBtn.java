@@ -18,7 +18,7 @@ public class ExportBtn extends Button
     public void act() 
     {
         super.act();//call the Button class act
-        export("output.txt");
+        export(((MyWorld)getWorld()).getOutputFile());//export the pixel to the filename given in the text box
     }
     public ExportBtn(String text, Point size)
     {
@@ -44,7 +44,10 @@ public class ExportBtn extends Button
                         //get the string data to be written to txt.
                         Pixel tempPixel = tempPixels[i][j];//the current pixel we are currently on in the iteration
                         writer.write(tempPixel.getStringValue());
-                        writer.write("\n");
+                        if(!(i == 15 && j == 15))
+                        {
+                            writer.write("\n");
+                        }
                     }
                 }
                 writer.close();
